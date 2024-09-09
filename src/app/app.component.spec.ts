@@ -26,4 +26,8 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, jenkins-test');
   });
+
+  it('should have a 50% chance of passing', () => {
+    expect(Math.random() < 0.5).toBeTrue();
+  });
 });
